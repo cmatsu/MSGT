@@ -115,20 +115,20 @@
 		        click: panToFeature
 		    });
 		}
-		$.getJSON("https://opendata.arcgis.com/datasets/8fbffa70eb8746fa99d1dab0f3ae1747_2432.geojson",function(data){
+		$.getJSON("income.geojson",function(data){
 		    geojson = L.geoJson(data, {
 					style: style,
 					onEachFeature: onEachFeature
 				}).addTo(mymap);
 		});
 		var facilities = L.icon({
-		    iconUrl: 'https://cdn4.iconfinder.com/data/icons/aiga-symbol-signs/612/aiga_first_aid_bg-512.png',
+		    iconUrl: 'icon.png',
 				iconSize: [20, 20],
 		    iconAnchor: [0, 0],
 		    popupAnchor: [0, 0]
 		});
 
-		$.getJSON("https://opendata.arcgis.com/datasets/1b7f0fb5179a400f91a35c0b6bfd77c9_733.geojson",function(data){
+		$.getJSON("medical.geojson",function(data){
 				L.geoJson(data, {
 					pointToLayer: function(feature, latlng){
 					        var marker = L.marker(latlng, {icon: facilities});
