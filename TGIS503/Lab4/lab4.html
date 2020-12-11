@@ -12,7 +12,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-colorschemes"></script>
-    <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.min.js"></script>
   </head>
 
 	<body>
@@ -91,7 +90,7 @@
   						</li>
   					</ol></div>
 					</div>
-          <h2 id='rseci'>Racial and Social Equity Assessment of King County Census Tracts</h2>
+          <h2 id='rseci'>Racial and Social Equity Assessment of Seattle Census Tracts</h2>
 					<div id='rsecimap'><div class='map-overlay' id='rsecifeatures'>
 						<!-- <h4><u>Racial and Social Equity Assessment Breakdown</u></h4> -->
 
@@ -117,64 +116,71 @@
 									<p>The following assessments were made based on the <a href="https://data-seattlecitygis.opendata.arcgis.com/datasets/51f795b05d284f3e82902de8de06939e_1">
 										2011-2015 Five-Year American Community Survey Estimates by the U.S. Census Bureau.</a></p>
 							</div>
+							<h2 id='race'>Racial and Ethnic Demographics of Seattle Census Tracts</h2>
+							<div id='racemap'><div class='map-overlay' id='racefeatures'>
+								<!-- <h4><u>Racial Demographic Breakdown</u></h4> -->
+								<div id='getrace'><br><br><h5>Hover over a census tract for more info</h5></div>
+								<div class="race-container"><canvas id="racechart"></canvas ></div></div>
+								<div class='map-overlay' id='racelegend'></div><div class='map-overlay' id='racebar'></div>
+							</div>
+							<div class="desc">
+	              <p>The map above shows the percentage of POC population for each census tract in Seattle.
+									Each census tract can be hovered over to view the percentage and a chart showing
+									the overall racial and ethnic demographics.</p>
+									<h3>What does this tell us?</h3>
+									<p>There are more POC living towards the south of Seattle, with a dominant Asian
+										and Black demographic in tracts with extremely high POC presence. For instance, in Census Tract 110.92
+									where 92.2% of the population are POC, with a vast majority of the population consisting of Asian and Black identities.</p>
+							</div>
 
-						<h2 id='race'>Racial and Ethnic Demographics of King County Census Tracts</h2>
-						<div id='racemap'><div class='map-overlay' id='racefeatures'>
-							<!-- <h4><u>Racial Demographic Breakdown</u></h4> -->
-							<div id='getrace'><br><br><h5>Hover over a census tract for more info</h5></div>
-							<div class="race-container"><canvas id="racechart"></canvas ></div></div>
-							<div class='map-overlay' id='racelegend'></div><div class='map-overlay' id='racebar'></div>
-						</div>
-						<div class="desc">
-              <p>The map above shows the percentage of POC population for each census tract in Seattle.
-								Each census tract can be hovered over to view the percentage and a chart showing
-								the overall racial and ethnic demographics.</p>
-								<h3>What does this tell us?</h3>
+							<h2 id='income'>Median Household Income and Poverty Levels of Seattle Census Tracts</h2>
+							<div id='incomemap'><div class='map-overlay' id='incomefeatures'>
+								<div id='getincome'><br><br><h5>Hover over a census tract for more info</h5></div>
+								<div class="income-container"><canvas id="incomechart"></canvas></div></div>
+								<div class='map-overlay' id='incomelegend'></div>
+								<div class='map-overlay' id='povertylegend'></div>
+								<div class='map-overlay' id='incomebar'></div>
+								<div class='map-overlay' id='toggle'></div>
+							</div>
 
-						</div>
+							<div class="desc">
+								<p>The map above has two layers. The default layer shows the median household income per census tract in Seattle.
+									Each census tract can be hovered over to view the income and a chart showing the population per household income level.
+								</p><p>The second layer shows the percentage of the population in poverty per census tract in Seattle.
+								 Each census tract can be hovered over to view the percentage, as well as other details regarding poverty statistics.</p>
+								 <h3>What does this tell us?</h3>
+								 <p>Comparing the two layers, it is evident that South Seattle has, on average,
+									 lower median household incomes and higher percentages of the population in poverty.</p>
+								<p>Census Tract 110.01 in particular has an extremely high percentage of poverty at 44.3% of the population living in poverty,
+										 with one of the lowest median household incomes of $24725.</p>
+							</div>
 
-          <h2 id='income'>Median Household Income and Poverty Levels of King County Census Tracts</h2>
-          <div id='incomemap'><div class='map-overlay' id='incomefeatures'>
-						<div id='getincome'><br><br><h5>Hover over a census tract for more info</h5></div>
-            <div class="income-container"><canvas id="incomechart"></canvas></div></div>
-            <div class='map-overlay' id='incomelegend'></div>
-						<div class='map-overlay' id='povertyleagend'></div>
-						<div class='map-overlay' id='incomebar'></div>
-            <div class='map-overlay' id='toggle'></div>
-          </div>
 
-					<div class="desc">
-						<p>The map above has two layers. The default layer shows the median household income per census tract in Seattle.
-							Each census tract can be hovered over to view the income and a chart showing the population per household income level.
-						</p><p>The second layer shows the percentage of the population in poverty per census tract in Seattle.
-						 Each census tract can be hovered over to view the percentage, as well as other details regarding poverty statistics.</p>
-						 <h3>What does this tell us?</h3>
-						 <p>Comparing the two layers, it is evident that South Seattle has, on average,
-							 lower median household incomes and higher percentages of the population in poverty.</p>
-						<p>Census Tract 110.01 in particular has an extremely high percentage of poverty at 44.3% of the population living in poverty,
-								 with one of the lowest median household incomes of $24725.</p>
-					</div>
+
+
 
           <h2 class="subheading" id='conclusion'>Conclusion</h2>
 					<div class='desc'>
 						<p>It can be concluded that there is a concentration of disadvantaged census tracts in the south
-							and  </p>
+							and more census tracts in that region have extreme values for both racial and economic factors.
+							There is a much greater percentage of POC in the total population, and a much higher rate of
+							poverty and lower median household incomes in these region.</p>
+						<p>However, it is also important to note that the data gathered around University District has a similar pattern to
+								the disadvantaged areas in the south but is not necessarily
+								reflective of actual poverty as the area houses students, many of whom may not be financially independent yet.</p>
 						<h3>What is done well?</h3>
-						<p>The use of a composite index to aggregate different types of disadvantage is excellent because </p>
+						<p>The use of a composite index to aggregate different types of disadvantage is excellent because
+							doing so provides a well rounded assessment which allows for comparison between disadvantaged
+							census tracts to assess which factors require more attention for those areas. </p>
 						<h3>What are the issues?</h3>
 						<p>While this assessment provides a general idea of the level of disadvantage on a census tract level,
 							it does not reflect population densities, nor does it show variation within census tracts.
 							Therefore, extremely disadvantaged neighborhoods are averaged out if the census tract as a whole is not so disadvantaged.</p>
-						<p>It is also important to note that the data gathered around University District has a similar pattern to
-							the disadvantaged areas in the south but is not necessarily
-							reflective of actual poverty as the area houses students, many of whom may receive financial assistance.</p>
 					</div>
 				</div>
 			</div>
 
 			<script>
-
-
 			//sidebar menu
 			$("#accordion > li").click(function(){
 
