@@ -5,13 +5,12 @@ body {
   text-align: center;
   background-color: #ffefbf;
   color: #594c3f;
-  padding: 10px;
+  padding: 20px;
   overflow-x: hidden;
 }
 
 .heading, .subheading, .desc {
   border-radius: 25px;
-
   padding: 30px;
 }
 
@@ -103,15 +102,24 @@ li {
 }
 
 .main {
-  max-width: 70vw;
-  min-width: 70vw;
-  margin-left: 300px;
-  margin-right: 40px;
+  width: 70vw;
+  margin-left: 20px;
   font-size: 28px;
   padding: 0px 10px;
 }
+.side {
+  max-width: 360px;
+}
+
+#buffer {
+  height:180px;
+}
 
 .container {
+  display: flex;
+  flex-direction: row;
+}
+.subcontainer {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -119,12 +127,12 @@ li {
   text-align: center;
 }
 
-.container a {
-	color: #2196F3;
+.subcontainer a {
   text-decoration: none;
+  color: #2196F3;
 }
 
-.container a:visited {
+.subcontainer a:visited {
   color: #2196F3;
 }
 
@@ -353,9 +361,8 @@ padding-left: 5px;
 
 .sidebar {
   width: 250px;
-  position: fixed;
-  z-index: 1;
-  top: 180px;
+  position: sticky;
+  top: 30px;
   left: 40px;
   background: #eee;
   overflow-x: hidden;
@@ -374,4 +381,8 @@ padding-left: 5px;
 
 .sidebar a:hover {
   color: #064579;
+}
+
+footer {
+  margin-top: 50px;
 }
