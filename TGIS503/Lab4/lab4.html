@@ -15,26 +15,30 @@
   </head>
 
 	<body>
-		<div class='sidebar'>
-			<a href="#intro">Introduction</a>
-		<ul id="accordion">
-			<li><a href="#rsecindex">Racial and Social Equity Composite Index</a></li>
-			<ul>
-				<li><a href="#index">What is it?</a></li>
-				<li><a href="#rseci">Map Assessment</a></li>
-			</ul>
-			<li><a href="#sociofactors">Socioeconomic Factors</a></li>
-			<ul><li><a href="#socio">What's the significance?</a></li>
-				<li><a href="#race">Racial Demographics</a></li>
-				<li><a href="#income">Income and Poverty</a></li>
-			</ul>
-		</ul>
-		<a href="#conclusion">Conclusion</a>
-		</div>
+		<div class='container'>
+			<div class='side'>
+				<div id='buffer'></div>
+				<div class='sidebar'>
+					<a href="#intro">Introduction</a>
+				<ul id="accordion">
+					<li><a href="#rsecindex">Racial and Social Equity Composite Index</a></li>
+					<ul>
+						<li><a href="#index">What is it?</a></li>
+						<li><a href="#rseci">Map Assessment</a></li>
+					</ul>
+					<li><a href="#sociofactors">Socioeconomic Factors</a></li>
+					<ul><li><a href="#socio">What's the significance?</a></li>
+						<li><a href="#race">Racial Demographics</a></li>
+						<li><a href="#income">Income and Poverty</a></li>
+					</ul>
+				</ul>
+				<a href="#conclusion">Conclusion</a>
+				</div>
+			</div>
 
 		<div class="main">
 			<h1 class='heading'>Racial and Social Equity in Seattle</h1>
-				<div class="container">
+				<div class="subcontainer">
 					<h2 class='subheading' id='intro'>Introduction</h2>
 						<div class="desc">
 							<p>Equity mapping is a way of using GIS technology to make connections between areas of opportunity
@@ -156,9 +160,6 @@
 							</div>
 
 
-
-
-
           <h2 class="subheading" id='conclusion'>Conclusion</h2>
 					<div class='desc'>
 						<p>It can be concluded that there is a concentration of disadvantaged census tracts in the south
@@ -177,9 +178,12 @@
 							it does not reflect population densities, nor does it show variation within census tracts.
 							Therefore, extremely disadvantaged neighborhoods are averaged out if the census tract as a whole is not so disadvantaged.</p>
 					</div>
+					<footer>
+								<p>Created by Chiaki Matsuno 2020</p>
+					</footer>
 				</div>
 			</div>
-
+		</div>
 			<script>
 			//sidebar menu
 			$("#accordion > li").click(function(){
@@ -488,13 +492,7 @@
 
 			</script>
 
-			<footer>
-				<div class="main">
-					<div class='container'>
-						<p>Created by Chiaki Matsuno 2020</p>
-					</div>
-				</div>
-			</footer>
+
 
 
 	</body>
